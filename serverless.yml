@@ -1,0 +1,17 @@
+# This is a default configuration file
+# for the serverless framework.
+# For more options and additional customization
+# refer to docs.serverless.com
+service: pig_evolution_3403 
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+    - http:
+        path: /hello
+        method: get
